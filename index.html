@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="221 ACCESS — accessoires auto, moto, maison et chambre. Contactez-nous sur WhatsApp pour confirmer disponibilité, prix et livraison au Sénégal.">
+<title>221 ACCESS | Accessoires auto, moto & maison</title>
+
+<style>
+:root{
+  --ink:#111827;
+  --muted:#64748b;
+  --paper:#f8fafc;
+  --line:#e2e8f0;
+  --accent:#d8b36a;
+  --white:#fff
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--paper)
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+.wrap{
+  width:min(1120px,92%);
+  margin:auto
+}
+
+.top{
+  background:#0b1220;
+  color:#fff;
+  font-size:.85rem;
+  text-align:center;
+  padding:9px 12px
+}
+
+.nav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:5
+}
+
+.navin{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:15px 0
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:.08em;
+  font-size:1.2rem
+}
+
+.brand span{color:#a87928}
+
+.links{
+  display:flex;
+  gap:22px;
+  font-size:.92rem
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--ink);
+  color:#fff;
+  padding:12px 17px;
+  border-radius:10px;
+  font-weight:700;
+  border:1px solid var(--ink);
+  cursor:pointer
+}
+
+.btn.gold{
+  background:var(--accent);
+  color:#1f2937;
+  border-color:var(--accent)
+}
+
+.btn.outline{
+  background:transparent;
+  color:var(--ink)
+}
+
+.hero{
+  background:linear-gradient(120deg,#101827,#263449);
+  color:#fff;
+  padding:70px 0
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:36px
+}
+
+.eyebrow{
+  color:#e7c98f;
+  text-transform:uppercase;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.16em
+}
+
+.hero h1{
+  font-size:clamp(2.4rem,6vw,4.5rem);
+  line-height:1.03;
+  margin:14px 0
+}
+
+.hero p{
+  color:#dbe3ee;
+  max-width:570px;
+  line-height:1.7
+}
+
+.hero-card{
+  background:#fff;
+  color:var(--ink);
+  border-radius:22px;
+  padding:24px;
+  box-shadow:0 22px 60px #0003
+}
+
+.hero-card .big{
+  font-size:4rem;
+  text-align:center;
+  margin:12px
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:20px 0
+}
+
+.chip{
+  background:#ffffff16;
+  border:1px solid #ffffff30;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:.82rem
+}
+
+.section{
+  padding:56px 0
+}
+
+.section h2{
+  font-size:clamp(1.7rem,3vw,2.4rem);
+  margin:0 0 10px
+}
+
+.sub{
+  color:var(--muted);
+  line-height:1.65;
+  max-width:700px
+}
+
+.categories,.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:26px
+}
+
+.category,.product{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:19px
+}
+
+.category .emoji{
+  font-size:2rem
+}
+
+.category h3{
+  margin:10px 0 5px
+}
+
+.category p,.product p{
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.5;
+  margin:0
+}
+
+.products{
+  grid-template-columns:repeat(3,1fr)
+}
+
+.product{
+  padding:0;
+  overflow:hidden
+}
+
+.product-art{
+  height:145px;
+  background:linear-gradient(145deg,#e8edf3,#f9fafb);
+  display:grid;
+  place-items:center;
+  font-size:3rem
+}
+
+.product-body{
+  padding:17px
+}
+
+.product h3{
+  font-size:1.03rem;
+  margin:0 0 8px
+}
+
+.price{
+  font-weight:800;
+  margin:13px 0;
+  color:#8a611c
+}
+
+.notice{
+  margin-top:18px;
+  border:1px solid #ead7ae;
+  background:#fffaf0;
+  border-radius:12px;
+  padding:13px 15px;
+  color:#72531b;
+  font-size:.88rem;
+  line-height:1.5
+}
+
+.contact{
+  background:#eef2f7
+}
+
+.contactbox{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  border:1px solid var(--line)
+}
+
+footer{
+  background:#0b1220;
+  color:#dbe3ee;
+  padding:28px 0;
+  font-size:.88rem
+}
+
+footer .foot{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap
+}
+
+.mobile{
+  display:none
+}
+
+@media(max-width:760px){
+
+  .links{
+    display:none
+  }
+
+  .mobile{
+    display:inline-flex
+  }
+
+  .hero{
+    padding:48px 0
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr
+  }
+
+  .hero-card{
+    max-width:420px
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .contactbox{
+    align-items:flex-start;
+    flex-direction:column
+  }
+}
+
+@media(max-width:430px){
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:10px
+  }
+
+  .product-art{
+    height:110px
+  }
+
+  .product-body{
+    padding:12px
+  }
+
+  .btn{
+    padding:11px 12px
+  }
+
+  .hero-card{
+    padding:18px
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+Boutique en ligne • Commandes WhatsApp • Livraison à confirmer partout au Sénégal
+</div>
+
+<header class="nav">
+<div class="wrap navin">
+
+<a class="brand" href="#">
+<span>221</span> ACCESS
+</a>
+
+<nav class="links">
+<a href="#categories">Catégories</a>
+<a href="#catalogue">Catalogue</a>
+<a href="#livraison">Livraison</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn mobile" href="#catalogue">
+Voir les produits
+</a>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="wrap hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Le choix pratique, le style en plus
+</div>
+
+<h1>
+Les accessoires<br>
+qui font la différence.
+</h1>
+
+<p>
+Découvre notre sélection d’accessoires pour voiture,
+moto, chambre et maison. Contacte-nous pour vérifier
+le prix, la disponibilité et les modalités de livraison.
+</p>
+
+<div class="chips">
+<span class="chip">Auto & moto</span>
+<span class="chip">Maison & chambre</span>
+<span class="chip">Sénégal</span>
+</div>
+
+<a class="btn gold" href="#catalogue">
+Explorer le catalogue
+</a>
+
+<a class="btn outline"
+style="border-color:#ffffff66;color:#fff"
+href="#contact">
+Nous contacter
+</a>
+
+</div>
+
+<div class="hero-card">
+
+<div class="eyebrow" style="color:#8a611c">
+Bienvenue chez
+</div>
+
+<div class="big">✦</div>
+
+<h2 style="text-align:center;margin:0">
+221 ACCESS
+</h2>
+
+<p style="text-align:center;color:#64748b">
+Accessoires sélectionnés pour le quotidien.
+</p>
+
+<div style="text-align:center;margin-top:18px">
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%20221%20ACCESS%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20produits."
+target="_blank"
+rel="noopener">
+
+Écrire sur WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="categories">
+
+<div class="wrap">
+
+<h2>Nos catégories</h2>
+
+<p class="sub">
+Une boutique simple, claire et pensée pour les achats sur téléphone.
+</p>
+
+<div class="categories">
+
+<article class="category">
+<div class="emoji">🚘</div>
+<h3>Auto</h3>
+<p>
+Accessoires utiles pour l’intérieur et l’entretien du véhicule.
+</p>
+</article>
+
+<article class="category">
+<div class="emoji">🏍️</div>
+<h3>Moto</h3>
+<p>
+Accessoires pratiques, selon la compatibilité du modèle.
+</p>
+</article>
+
+<article class="category">
+<div class="emoji">💡</div>
+<h3>Chambre</h3>
+<p>
+Lampes et petits accessoires pour organiser l’espace.
+</p>
+</article>
+
+<article class="category">
+<div class="emoji">🏠</div>
+<h3>Maison</h3>
+<p>
+Rangement et décoration pour le quotidien.
+</p>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<section class="section" id="catalogue" style="padding-top:0">
+
+<div class="wrap">
+
+<h2>Catalogue de lancement</h2>
+
+<p class="sub">
+Les références ci-dessous sont des idées de produits.
+Les prix seront affichés après confirmation auprès du fournisseur.
+</p>
+
+<div class="products">
+
+
+<article class="product">
+
+<div class="product-art">📱</div>
+
+<div class="product-body">
+
+<h3>Support téléphone voiture</h3>
+
+<p>
+Vérifier la fixation et la compatibilité.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20le%20support%20t%C3%A9l%C3%A9phone%20voiture.%20Quel%20est%20son%20prix%20et%20est-il%20disponible%20%3F"
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+<article class="product">
+
+<div class="product-art">🧽</div>
+
+<div class="product-body">
+
+<h3>Kit nettoyage auto</h3>
+
+<p>
+Accessoires d’entretien intérieur.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20souhaite%20le%20prix%20du%20kit%20de%20nettoyage%20auto."
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+<article class="product">
+
+<div class="product-art">🧺</div>
+
+<div class="product-body">
+
+<h3>Organiseur de voiture</h3>
+
+<p>
+Pour garder les petits objets rangés.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20souhaite%20le%20prix%20de%20l%E2%80%99organiseur%20de%20voiture."
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+<article class="product">
+
+<div class="product-art">🏍️</div>
+
+<div class="product-body">
+
+<h3>Support téléphone moto</h3>
+
+<p>
+Compatibilité et sécurité à vérifier.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20souhaite%20le%20prix%20du%20support%20t%C3%A9l%C3%A9phone%20moto."
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+<article class="product">
+
+<div class="product-art">💡</div>
+
+<div class="product-body">
+
+<h3>Lampe de chevet LED</h3>
+
+<p>
+Éclairage d’ambiance pour la chambre.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20souhaite%20le%20prix%20de%20la%20lampe%20de%20chevet%20LED."
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+<article class="product">
+
+<div class="product-art">🗃️</div>
+
+<div class="product-body">
+
+<h3>Boîte de rangement</h3>
+
+<p>
+Pour organiser les petits espaces.
+</p>
+
+<div class="price">
+Prix à confirmer
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%2C%20je%20souhaite%20le%20prix%20de%20la%20bo%C3%AEte%20de%20rangement."
+target="_blank"
+rel="noopener">
+Demander le prix
+</a>
+
+</div>
+</article>
+
+
+</div>
+
+<div class="notice">
+
+<strong>Transparence :</strong>
+ce catalogue est une présélection.
+Aucun produit n’est annoncé comme en stock.
+Confirme la disponibilité, le prix total et les délais
+avant de valider une commande.
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section contact" id="livraison">
+
+<div class="wrap">
+
+<h2>Livraison au Sénégal</h2>
+
+<p class="sub">
+Nous pouvons organiser la livraison selon la destination
+et le transporteur disponible. Les frais et délais sont
+confirmés avant validation de la commande.
+La livraison n’est pas annoncée comme gratuite par défaut.
+</p>
+
+</div>
+</section>
+
+
+<section class="section" id="contact">
+
+<div class="wrap">
+
+<div class="contactbox">
+
+<div>
+
+<h2 style="margin-bottom:8px">
+Une question ou un produit en tête ?
+</h2>
+
+<p class="sub" style="margin:0">
+Écris à 221 ACCESS pour demander les prix,
+vérifier la disponibilité ou discuter d’une livraison.
+</p>
+
+<p>
+<strong>
+WhatsApp : +221 71 178 53 44
+</strong>
+</p>
+
+</div>
+
+<a class="btn"
+href="https://wa.me/221711785344?text=Bonjour%20221%20ACCESS%2C%20je%20souhaite%20me%20renseigner%20sur%20vos%20produits."
+target="_blank"
+rel="noopener">
+
+Contacter 221 ACCESS
+
+</a>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="wrap foot">
+
+<div>
+<strong>221 ACCESS</strong>
+<br>
+Les accessoires qui font la différence.
+</div>
+
+<div>
+© <span id="year"></span> 221 ACCESS • Sénégal
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+document.getElementById('year').textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
